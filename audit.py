@@ -10,10 +10,10 @@ app = Flask(__name__)
 
 # Configuración del servidor de correo
 app.config.update(
-    MAIL_SERVER='sandbox.smtp.mailtrap.io',
-    MAIL_PORT='2525',
-    MAIL_USERNAME='a95a9e3917b07b',
-    MAIL_PASSWORD='fc21159a96480c',
+    MAIL_SERVER='smtp.gmail.com',
+    #MAIL_PORT='2525',
+    MAIL_USERNAME='customercare@ecuadordirectroses.com',
+    MAIL_PASSWORD='wgseujhwyvuyifks',
     MAIL_USE_TLS=True,
     MAIL_USE_SSL=False
 )
