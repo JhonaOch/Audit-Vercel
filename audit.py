@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, redirect
+from flask import Flask, request, jsonify, redirect, send_file
 from flask_mail import Mail, Message
 from urllib.parse import quote, unquote
 import pandas as pd
@@ -99,6 +99,14 @@ def track_click(email_encoded):
     except Exception as e:
         return f"Error: {e}", 500
 
+
+@app.route('/download-excel')
+def download_excel():
+    excel_path = "auditoria_clicks.xlsx"  # o "./static/audit_clicks.xlsx"
+    try:
+        return send_file(excel_path, as_attachment=True)
+    except FileNotFoundError:
+        return "Archivo no encontrado", 404
 
 def generate_pdf_html(email, date ,link):
     # Generar el HTML para el PDF
