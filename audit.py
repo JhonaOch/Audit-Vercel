@@ -11,11 +11,11 @@ app = Flask(__name__)
 # Configuración del servidor de correo
 app.config.update(
     MAIL_SERVER='smtp.gmail.com',
-    MAIL_PORT= 587,
+    MAIL_PORT='587',
     MAIL_USERNAME='customercare@ecuadordirectroses.com',
     MAIL_PASSWORD='wgseujhwyvuyifks',
     MAIL_USE_TLS=True,
-    MAIL_USE_SSL=False
+   # MAIL_USE_SSL=False
 )
 
 mail = Mail(app)
