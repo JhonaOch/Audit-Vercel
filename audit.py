@@ -140,7 +140,7 @@ def generate_pdf_html(email, date ,link):
           Produbanco</font></p>
 
           <p><font face="Nunito Sans Normal">
-            <a href="{link}" target="_blank">Ver en el portal</a>
+            <a href="{link}" target="_blank">Detalle de consumo</a>
           </font></p>
           
           </td></tr></tbody></table>
